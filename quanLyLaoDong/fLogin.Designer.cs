@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.userNameTB = new System.Windows.Forms.TextBox();
-            this.passwordTB = new System.Windows.Forms.TextBox();
-            this.loginBTN = new System.Windows.Forms.Button();
             this.exitBTN = new System.Windows.Forms.Button();
+            this.loginBTN = new System.Windows.Forms.Button();
+            this.passwordTB = new System.Windows.Forms.TextBox();
+            this.userNameTB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,52 +54,17 @@
             this.panel1.Size = new System.Drawing.Size(494, 337);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // exitBTN
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Đăng Nhập";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên tài khoản";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.Location = new System.Drawing.Point(53, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mật khẩu";
-            // 
-            // userNameTB
-            // 
-            this.userNameTB.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.userNameTB.Location = new System.Drawing.Point(162, 122);
-            this.userNameTB.Name = "userNameTB";
-            this.userNameTB.Size = new System.Drawing.Size(278, 29);
-            this.userNameTB.TabIndex = 3;
-            // 
-            // passwordTB
-            // 
-            this.passwordTB.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.passwordTB.Location = new System.Drawing.Point(162, 167);
-            this.passwordTB.Name = "passwordTB";
-            this.passwordTB.PasswordChar = '*';
-            this.passwordTB.Size = new System.Drawing.Size(278, 29);
-            this.passwordTB.TabIndex = 4;
+            this.exitBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBTN.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.exitBTN.Location = new System.Drawing.Point(307, 223);
+            this.exitBTN.Name = "exitBTN";
+            this.exitBTN.Size = new System.Drawing.Size(133, 38);
+            this.exitBTN.TabIndex = 6;
+            this.exitBTN.Text = "Thoát";
+            this.exitBTN.UseVisualStyleBackColor = true;
+            this.exitBTN.Click += new System.EventHandler(this.exitBTN_Click);
             // 
             // loginBTN
             // 
@@ -113,17 +78,54 @@
             this.loginBTN.TabIndex = 5;
             this.loginBTN.Text = "Đăng nhập";
             this.loginBTN.UseVisualStyleBackColor = false;
+            this.loginBTN.Click += new System.EventHandler(this.loginBTN_Click);
             // 
-            // exitBTN
+            // passwordTB
             // 
-            this.exitBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBTN.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.exitBTN.Location = new System.Drawing.Point(307, 223);
-            this.exitBTN.Name = "exitBTN";
-            this.exitBTN.Size = new System.Drawing.Size(133, 38);
-            this.exitBTN.TabIndex = 6;
-            this.exitBTN.Text = "Thoát";
-            this.exitBTN.UseVisualStyleBackColor = true;
+            this.passwordTB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.passwordTB.Location = new System.Drawing.Point(162, 167);
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.PasswordChar = '*';
+            this.passwordTB.Size = new System.Drawing.Size(278, 29);
+            this.passwordTB.TabIndex = 4;
+            // 
+            // userNameTB
+            // 
+            this.userNameTB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.userNameTB.Location = new System.Drawing.Point(162, 122);
+            this.userNameTB.Name = "userNameTB";
+            this.userNameTB.Size = new System.Drawing.Size(278, 29);
+            this.userNameTB.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label3.Location = new System.Drawing.Point(53, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Mật khẩu";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên tài khoản";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Đăng Nhập";
             // 
             // fLogin
             // 

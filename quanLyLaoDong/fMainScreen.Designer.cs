@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainScreen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.quitButton = new FontAwesome.Sharp.IconButton();
             this.accountManagerBTN = new FontAwesome.Sharp.IconButton();
@@ -35,15 +36,18 @@
             this.searchBTN = new FontAwesome.Sharp.IconButton();
             this.mainScreenBTN = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.accountControl1 = new quanLyLaoDong.accountControl();
             this.searchControl1 = new quanLyLaoDong.searchControl();
             this.mainMenuControl1 = new quanLyLaoDong.mainMenuControl();
-            this.accountControl1 = new quanLyLaoDong.accountControl();
+            this.helloTxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
+            this.panel1.Controls.Add(this.helloTxt);
             this.panel1.Controls.Add(this.quitButton);
             this.panel1.Controls.Add(this.accountManagerBTN);
             this.panel1.Controls.Add(this.editModeBTN);
@@ -157,11 +161,22 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
             this.panel3.Location = new System.Drawing.Point(3, 1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(142, 100);
             this.panel3.TabIndex = 2;
+            // 
+            // accountControl1
+            // 
+            this.accountControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.accountControl1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.accountControl1.Location = new System.Drawing.Point(148, 1);
+            this.accountControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.accountControl1.Name = "accountControl1";
+            this.accountControl1.Size = new System.Drawing.Size(1114, 620);
+            this.accountControl1.TabIndex = 5;
             // 
             // searchControl1
             // 
@@ -180,19 +195,20 @@
             this.mainMenuControl1.Size = new System.Drawing.Size(1110, 617);
             this.mainMenuControl1.TabIndex = 3;
             // 
-            // accountControl1
+            // helloTxt
             // 
-            this.accountControl1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.accountControl1.Location = new System.Drawing.Point(148, 1);
-            this.accountControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.accountControl1.Name = "accountControl1";
-            this.accountControl1.Size = new System.Drawing.Size(1114, 620);
-            this.accountControl1.TabIndex = 5;
+            this.helloTxt.AutoSize = true;
+            this.helloTxt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helloTxt.Location = new System.Drawing.Point(9, 435);
+            this.helloTxt.Name = "helloTxt";
+            this.helloTxt.Size = new System.Drawing.Size(0, 17);
+            this.helloTxt.TabIndex = 5;
             // 
             // fMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1259, 620);
             this.Controls.Add(this.accountControl1);
@@ -201,10 +217,12 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình chính";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +239,6 @@
         private mainMenuControl mainMenuControl1;
         private searchControl searchControl1;
         private accountControl accountControl1;
+        private System.Windows.Forms.Label helloTxt;
     }
 }

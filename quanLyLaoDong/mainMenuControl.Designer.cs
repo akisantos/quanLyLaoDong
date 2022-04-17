@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.hiTB = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.statusPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.hiTB = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +44,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1114, 100);
             this.panel1.TabIndex = 1;
+            // 
+            // hiTB
+            // 
+            this.hiTB.AutoSize = true;
+            this.hiTB.Location = new System.Drawing.Point(40, 63);
+            this.hiTB.Name = "hiTB";
+            this.hiTB.Size = new System.Drawing.Size(171, 21);
+            this.hiTB.TabIndex = 1;
+            this.hiTB.Text = "Thông tin về công trình";
             // 
             // label1
             // 
@@ -64,15 +73,6 @@
             this.statusPanel.Name = "statusPanel";
             this.statusPanel.Size = new System.Drawing.Size(1096, 498);
             this.statusPanel.TabIndex = 2;
-            // 
-            // hiTB
-            // 
-            this.hiTB.AutoSize = true;
-            this.hiTB.Location = new System.Drawing.Point(40, 63);
-            this.hiTB.Name = "hiTB";
-            this.hiTB.Size = new System.Drawing.Size(98, 21);
-            this.hiTB.TabIndex = 1;
-            this.hiTB.Text = "Xin chào aki!";
             // 
             // mainMenuControl
             // 

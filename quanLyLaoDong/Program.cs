@@ -16,7 +16,7 @@ namespace quanLyLaoDong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fMainScreen());
+            Application.Run(new fLogin());
         }
     }
 }
