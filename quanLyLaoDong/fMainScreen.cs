@@ -16,14 +16,6 @@ namespace quanLyLaoDong
         {
             InitializeComponent();
 
-            mainMenuControl1.Enabled = true;
-            mainMenuControl1.Visible = true;
-            searchControl1.Enabled = false;
-            searchControl1.Visible = false;
-
-            accountControl1.Enabled = false;
-            accountControl1.Visible = false;
-
         }
        
 
@@ -54,6 +46,8 @@ namespace quanLyLaoDong
             accountControl1.Enabled = false;
             accountControl1.Visible = false;
 
+  
+
         }
 
         private void searchBTN_Click(object sender, EventArgs e)
@@ -68,14 +62,17 @@ namespace quanLyLaoDong
 
             searchBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 49, 250);
 
+
             //openUserControl
             mainMenuControl1.Enabled = false;
             mainMenuControl1.Visible = false;
 
             searchControl1.Enabled = true;
             searchControl1.Visible = true;
-
-
+            accountControl1.Enabled = false;
+            accountControl1.Visible = false;
+     
+ 
         }
 
         private void editModeBTN_Click(object sender, EventArgs e)
@@ -113,6 +110,27 @@ namespace quanLyLaoDong
 
             searchControl1.Enabled = false;
             searchControl1.Visible = false;
+        }
+
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void accountControl1_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+        }
+
+        private void mainMenuControl1_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+        }
+
+        private void searchControl1_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
         }
     }
 }
