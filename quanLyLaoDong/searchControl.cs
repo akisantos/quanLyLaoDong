@@ -27,8 +27,11 @@ namespace quanLyLaoDong
 
         }
 
+        
+
         private void searchBTN_Click(object sender, EventArgs e)
         {
+            
             string searchStr = searchContentTB.Text;
             string searchCategory = searchCategoryCB.Text;
             if (searchStr == "")
@@ -46,6 +49,21 @@ namespace quanLyLaoDong
             if (searchCategory == "Nhân viên")
             {
                 SearchNhanVien(sq);
+            }
+
+            if (searchCategory == "Phân công")
+            {
+                SearchPhanCong(sq);
+            }
+
+            if (searchCategory == "Công trình")
+            {
+                MessageBox.Show("ct", "HEHE");
+            }
+
+            if (searchCategory == "Phòng ban")
+            {
+                MessageBox.Show("PB", "HEHE");
             }
 
         }
@@ -79,9 +97,43 @@ namespace quanLyLaoDong
                 }
                
             }
-            
 
+        }
 
+        void SearchPhanCong(string searchQ)
+        {
+
+            List<PhanCong> phanCongList = PhanCongDAO.Instance.LoadPhanCong();
+            List<CongTrinh> ctList = CongTrinhDAO.Instance.LoadCongTrinh();
+            List<NhanVien> nvList = NhanVienDAO.Instance.LoadNhanVien();
+            string tenCT = "";
+            string tenNV = "";
+
+            resultDataGridView.Columns.Add("MaPhanCong", "Mã phân công");
+            resultDataGridView.Columns.Add("TenCT", "Tên công trình");
+            resultDataGridView.Columns.Add("TenNV", "Tên nhân viên");
+            resultDataGridView.Columns.Add("soGio", "Số giờ phân công");
+            foreach (var item in phanCongList)
+            {
+
+                foreach (var itemCT in ctList)
+                {
+                    if (item.MaCongTrinh == itemCT.Id)
+                    {
+                        tenCT = itemCT.Name;
+                    }
+                }
+
+                foreach (var itemNV in nvList)
+                {
+                    if (item.MaNV == itemNV.Id)
+                    {
+                        tenNV = itemNV.TenNV;
+                    }
+                }
+
+                resultDataGridView.Rows.Add(item.MaPhanCong, tenCT, tenNV, item.SoGio);
+            }
         }
 
         void dataInitation()

@@ -23,7 +23,6 @@ namespace quanLyLaoDong
             string ten = TenPhongTB.Text;
             if (ten != "" || ten != null)
             {
-                int maPhong = CapID();
                 int id = CapID();
                 DataProvider.Instance.ExcuteQuery("PhongBanAdd @MaPhong , @TenPhongBan", new object[] { id, ten });
                 this.Close();
@@ -50,6 +49,11 @@ namespace quanLyLaoDong
             }
 
             return 0;
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

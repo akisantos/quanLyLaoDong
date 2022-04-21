@@ -73,6 +73,7 @@
             this.iconButton2.TabIndex = 13;
             this.iconButton2.Text = "Hủy";
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // updateBtn
             // 

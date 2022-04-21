@@ -63,10 +63,24 @@
     <Compile Include="DAO\CongTrinhDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhanCongDAO.cs" />
     <Compile Include="DAO\PhongBanDAO.cs" />
     <Compile Include="DTO\CongTrinh.cs" />
     <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\PhanCong.cs" />
     <Compile Include="DTO\PhongBan.cs" />
+    <Compile Include="fCongTrinhAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCongTrinhAdd.Designer.cs">
+      <DependentUpon>fCongTrinhAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCTAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCTAdd.Designer.cs">
+      <DependentUpon>fCTAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +105,18 @@
     <Compile Include="fNVEdit.Designer.cs">
       <DependentUpon>fNVEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="fPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPhanCong.Designer.cs">
+      <DependentUpon>fPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPhanCongEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPhanCongEdit.Designer.cs">
+      <DependentUpon>fPhanCongEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="fPhongBanAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +129,19 @@
     <Compile Include="mainMenuControl.Designer.cs">
       <DependentUpon>mainMenuControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="phanCongControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="phanCongControl.Designer.cs">
+      <DependentUpon>phanCongControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="searchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +150,12 @@
     </Compile>
     <EmbeddedResource Include="accountControl.resx">
       <DependentUpon>accountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCongTrinhAdd.resx">
+      <DependentUpon>fCongTrinhAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCTAdd.resx">
+      <DependentUpon>fCTAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -126,21 +169,26 @@
     <EmbeddedResource Include="fNVEdit.resx">
       <DependentUpon>fNVEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fPhanCong.resx">
+      <DependentUpon>fPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPhanCongEdit.resx">
+      <DependentUpon>fPhanCongEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fPhongBanAdd.resx">
       <DependentUpon>fPhongBanAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenuControl.resx">
       <DependentUpon>mainMenuControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="phanCongControl.resx">
+      <DependentUpon>phanCongControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="searchControl.resx">
       <DependentUpon>searchControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +206,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\firmefoxm_icon_by_imyamak_de8uzca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_2022_04_09_111815542_7zG_icon-4.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

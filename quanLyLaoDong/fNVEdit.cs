@@ -102,8 +102,34 @@ namespace quanLyLaoDong
             bool gioiTinh = gioiTinhCheckBox.Checked;
             string phongQL = PhongQLCB.SelectedValue.ToString();
             string diachi = nvDiaChiTB.Text;
-            DataProvider.Instance.ExcuteQuery("NhanVienEdit @MaNhanVien , @MaPhong , @HoTen , @NgaySinh , @GioiTinh , @DiaChi", new object[] { id, phongQL, hoTen, ngaySinh, gioiTinh, diachi });
-            this.Close();
+            if (checkInfo())
+            {
+                DataProvider.Instance.ExcuteQuery("NhanVienEdit @MaNhanVien , @MaPhong , @HoTen , @NgaySinh , @GioiTinh , @DiaChi", new object[] { id, phongQL, hoTen, ngaySinh, gioiTinh, diachi });
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Chú ý chưa nhập đủ thông tin!", "Thông báo");
+            }
+
+
+        }
+
+        bool checkInfo()
+        {
+            string hoTen = nvHoTenTB.Text;
+
+            string phongQL = PhongQLCB.SelectedValue.ToString();
+            string diachi = nvDiaChiTB.Text;
+
+            bool q1 = false, q2 = false, q3 = false;
+            if (int.Parse(phongQL) > 0) q1 = true;
+            if (hoTen != "" && hoTen != null) q2 = true;
+
+            if (diachi != "" && diachi != null) q3 = true;
+
+            if (q1 == q2 && q2 == q3 && q3 == true) return true;
+            return false;
         }
     }
 }

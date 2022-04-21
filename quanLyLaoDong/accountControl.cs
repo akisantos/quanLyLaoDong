@@ -34,6 +34,7 @@ namespace quanLyLaoDong
 
         void LoadCongTrinh()
         {
+            congTrinhDataGridView.Rows.Clear();
             List<CongTrinh> congTrinhList = CongTrinhDAO.Instance.LoadCongTrinh();
 
             foreach (var item in congTrinhList)
@@ -154,6 +155,34 @@ namespace quanLyLaoDong
                     MessageBox.Show("Hãy chọn hàng muốn xóa!", "Thông báo");
                 }
             }
+        }
+
+        private void congTrinhDelBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Bạn có chắc muốn xóa không ?", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+                if (congTrinhDataGridView.SelectedRows.Count > 0)
+                {
+                    int selectedRowIndex = congTrinhDataGridView.SelectedRows[0].Index;
+                    DataGridViewRow selectedRow = congTrinhDataGridView.Rows[selectedRowIndex];
+                    int maNhanVien = Convert.ToInt32((selectedRow.Cells["MaCongTrinh"].Value));
+                    string q = "delete from dbo.CongTrinh where MaCongTrinh=" + maNhanVien;
+                    DataProvider.Instance.ExcuteQuery(q);
+                    congTrinhDataGridView.Rows.RemoveAt(selectedRowIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Hãy chọn hàng muốn xóa!", "Thông báo");
+                }
+            }
+        }
+
+        private void searchCongTrinhBtn_Click(object sender, EventArgs e)
+        {
+            fCongTrinhAdd fCongTrinhAddForm = new fCongTrinhAdd();
+            fCongTrinhAddForm.ShowDialog();
+            LoadCongTrinh();
         }
     }
 

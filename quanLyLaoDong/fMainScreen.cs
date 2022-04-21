@@ -16,26 +16,6 @@ namespace quanLyLaoDong
         {
             InitializeComponent();
 
-        }
-       
-
-        private void quitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void mainScreenBTN_Click(object sender, EventArgs e)
-        {
-            editModeBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            searchBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            accountManagerBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            searchBTN.BackColor = Color.FromArgb(93, 139, 244);
-            mainScreenBTN.BackColor = Color.FromArgb(45, 49, 250);
-            editModeBTN.BackColor = Color.FromArgb(93, 139, 244);
-            accountManagerBTN.BackColor = Color.FromArgb(93, 139, 244);
-            mainScreenBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 49, 250);
-
-            //openUserControl
             mainMenuControl1.Enabled = true;
             mainMenuControl1.Visible = true;
 
@@ -46,70 +26,151 @@ namespace quanLyLaoDong
             accountControl1.Enabled = false;
             accountControl1.Visible = false;
 
+            phanCongControl1.Enabled = false;
+            phanCongControl1.Visible = false;
+
+        }
+       
+
+        private void quitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void mainScreenBTN_Click(object sender, EventArgs e)
+        {
+
+
+            accountManagerBTN.BackColor = Color.FromArgb(56, 143, 129);
   
+            accountControl1.Enabled = false;
+            accountControl1.Visible = false;
+            accountManagerBTN.IconColor = Color.FromArgb(126, 199, 174);
+            accountManagerBTN.ForeColor = Color.FromArgb(126, 199, 174); 
+
+
+            editModeBTN.BackColor = Color.FromArgb(56, 143, 129);
+
+            phanCongControl1.Enabled = false;
+            phanCongControl1.Visible = false;
+            editModeBTN.IconColor = Color.FromArgb(126, 199, 174);
+            editModeBTN.ForeColor = Color.FromArgb(126, 199, 174);
+
+            searchBTN.BackColor = Color.FromArgb(56, 143, 129);
+
+            searchControl1.Enabled = false;
+            searchControl1.Visible = false;
+            searchBTN.IconColor = Color.FromArgb(126, 199, 174);
+            searchBTN.ForeColor = Color.FromArgb(126, 199, 174);
+            
+
+            mainScreenBTN.BackColor = Color.FromArgb(33, 129, 115);
+
+            mainScreenBTN.IconColor = Color.White;
+            mainScreenBTN.ForeColor = Color.White;
+            mainMenuControl1.Enabled = true;
+            mainMenuControl1.Visible = true;
 
         }
 
         private void searchBTN_Click(object sender, EventArgs e)
         {
-            editModeBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            mainScreenBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            accountManagerBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            searchBTN.BackColor = Color.FromArgb(45, 49, 250);
-            mainScreenBTN.BackColor = Color.FromArgb(93, 139, 244);
-            editModeBTN.BackColor = Color.FromArgb(93, 139, 244);
-            accountManagerBTN.BackColor = Color.FromArgb(93, 139, 244);
 
-            searchBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 49, 250);
+            accountManagerBTN.BackColor = Color.FromArgb(56, 143, 129);
+
+            accountControl1.Enabled = false;
+            accountControl1.Visible = false;
+            accountManagerBTN.IconColor = Color.FromArgb(126, 199, 174);
+            accountManagerBTN.ForeColor = Color.FromArgb(126, 199, 174);
 
 
-            //openUserControl
-            mainMenuControl1.Enabled = false;
-            mainMenuControl1.Visible = false;
+            editModeBTN.BackColor = Color.FromArgb(56, 143, 129);
+
+            phanCongControl1.Enabled = false;
+            phanCongControl1.Visible = false;
+            editModeBTN.IconColor = Color.FromArgb(126, 199, 174);
+            editModeBTN.ForeColor = Color.FromArgb(126, 199, 174);
+
+            searchBTN.BackColor = Color.FromArgb(33, 129, 115);
 
             searchControl1.Enabled = true;
             searchControl1.Visible = true;
-            accountControl1.Enabled = false;
-            accountControl1.Visible = false;
-     
- 
+            searchBTN.IconColor = Color.White;
+            searchBTN.ForeColor = Color.White;
+
+
+            mainScreenBTN.BackColor = Color.FromArgb(56, 143, 129);
+
+            mainScreenBTN.IconColor = Color.FromArgb(126, 199, 174);
+            mainScreenBTN.ForeColor = Color.FromArgb(126, 199, 174);
+            mainMenuControl1.Enabled = false;
+            mainMenuControl1.Visible = false;
+
+
         }
 
         private void editModeBTN_Click(object sender, EventArgs e)
         {
-            searchBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            mainScreenBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            accountManagerBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            searchBTN.BackColor = Color.FromArgb(93, 139, 244);
-            mainScreenBTN.BackColor = Color.FromArgb(93, 139, 244);
-            editModeBTN.BackColor = Color.FromArgb(45, 49, 250);
-            accountManagerBTN.BackColor = Color.FromArgb(93, 139, 244);
-            editModeBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 49, 250);
-        }
 
-        private void accountManagerBTN_Click(object sender, EventArgs e)
-        {
-            searchBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            mainScreenBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
-            editModeBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(93, 139, 244);
+            accountManagerBTN.BackColor = Color.FromArgb(56, 143, 129);
+            accountControl1.Enabled = false;
+            accountControl1.Visible = false;
+            accountManagerBTN.IconColor = Color.FromArgb(126, 199, 174);
+            accountManagerBTN.ForeColor = Color.FromArgb(126, 199, 174);
 
-            searchBTN.BackColor = Color.FromArgb(93, 139, 244);
-            mainScreenBTN.BackColor = Color.FromArgb(93, 139, 244);
-            editModeBTN.BackColor = Color.FromArgb(93, 139, 244);
 
-            accountManagerBTN.BackColor = Color.FromArgb(45, 49, 250);
+            editModeBTN.BackColor = Color.FromArgb(33, 129, 115);
+            phanCongControl1.Enabled = true;
+            phanCongControl1.Visible = true;
+            editModeBTN.IconColor = Color.White;
+            editModeBTN.ForeColor = Color.White;
 
-            accountManagerBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 49, 250);
+            searchBTN.BackColor = Color.FromArgb(56, 143, 129);
+            searchControl1.Enabled = false;
+            searchControl1.Visible = false;
+            searchBTN.IconColor = Color.FromArgb(126, 199, 174);
+            searchBTN.ForeColor = Color.FromArgb(126, 199, 174);
 
-            accountControl1.Enabled = true;
-            accountControl1.Visible = true;
 
+            mainScreenBTN.BackColor = Color.FromArgb(56, 143, 129);
+            mainScreenBTN.IconColor = Color.FromArgb(126, 199, 174);
+            mainScreenBTN.ForeColor = Color.FromArgb(126, 199, 174);
             mainMenuControl1.Enabled = false;
             mainMenuControl1.Visible = false;
 
 
+        }
+
+        private void accountManagerBTN_Click(object sender, EventArgs e)
+        {
+
+            accountManagerBTN.BackColor = Color.FromArgb(33, 129, 115);
+            accountControl1.Enabled = true;
+            accountControl1.Visible = true;
+            accountManagerBTN.IconColor = Color.White;
+            accountManagerBTN.ForeColor = Color.White;
+
+
+            editModeBTN.BackColor = Color.FromArgb(56, 143, 129);
+            phanCongControl1.Enabled = false;
+            phanCongControl1.Visible = false;
+            editModeBTN.IconColor = Color.FromArgb(126, 199, 174);
+            editModeBTN.ForeColor = Color.FromArgb(126, 199, 174);
+
+            searchBTN.BackColor = Color.FromArgb(56, 143, 129);
+
             searchControl1.Enabled = false;
             searchControl1.Visible = false;
+            searchBTN.IconColor = Color.FromArgb(126, 199, 174);
+            searchBTN.ForeColor = Color.FromArgb(126, 199, 174);
+
+
+            mainScreenBTN.BackColor = Color.FromArgb(56, 143, 129);
+            mainScreenBTN.IconColor = Color.FromArgb(126, 199, 174);
+            mainScreenBTN.ForeColor = Color.FromArgb(126, 199, 174);
+            mainMenuControl1.Enabled = false;
+            mainMenuControl1.Visible = false;
+
         }
 
 

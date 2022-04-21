@@ -18,6 +18,8 @@ namespace quanLyLaoDong
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new fLogin());
             Application.Run(new fMainScreen());
+            //Application.Run(new fPhanCong());
+            //Application.Run(new fCongTrinhAdd());
         }
     }
 }
