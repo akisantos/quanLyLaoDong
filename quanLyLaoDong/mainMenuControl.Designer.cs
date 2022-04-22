@@ -72,9 +72,9 @@
             this.statusPanel.AutoScroll = true;
             this.statusPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.statusPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.statusPanel.Location = new System.Drawing.Point(40, 107);
+            this.statusPanel.Location = new System.Drawing.Point(3, 107);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(1040, 513);
+            this.statusPanel.Size = new System.Drawing.Size(1108, 513);
             this.statusPanel.TabIndex = 2;
             // 
             // mainMenuControl

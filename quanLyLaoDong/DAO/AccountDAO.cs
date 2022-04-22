@@ -1,4 +1,5 @@
-﻿using System;
+﻿using quanLyLaoDong.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -19,11 +20,35 @@ namespace quanLyLaoDong.DAO
 
         private AccountDAO() { }
 
-        public bool Login(string usrName, string userPAss)
+        public List<Account> Login(string usrName, string userPAss)
         {
+            List<Account> list = new List<Account>();
             string q = "select * from dbo.Account where userName ='"+ usrName + "' and userPassword= '"+ userPAss +"'";
             DataTable res = DataProvider.Instance.ExcuteQuery(q);
-            return res.Rows.Count >0;
+            foreach (DataRow item in res.Rows)
+            {
+                Account ac = new Account(item);
+                list.Add(ac);
+            }
+            return list;
+        }
+
+       
+
+        public List<Account> LoadAccountList()
+        {
+            List<Account> list = new List<Account>();
+
+            string q = "select * from dbo.Account";
+
+            DataTable dt = DataProvider.Instance.ExcuteQuery(q);
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Account ac = new Account(item);
+                list.Add(ac);
+            }
+            return list;
         }
     }
 }

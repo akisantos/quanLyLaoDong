@@ -18,6 +18,8 @@ namespace quanLyLaoDong
         {
             InitializeComponent();
             LoadPhanCong();
+            phanCongDataGridView.DefaultCellStyle.SelectionBackColor = Color.White;
+            phanCongDataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 129, 115);
         }
 
         private void phanCongControl_Load(object sender, EventArgs e)

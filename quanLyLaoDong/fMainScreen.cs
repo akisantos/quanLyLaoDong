@@ -12,6 +12,8 @@ namespace quanLyLaoDong
 {
     public partial class fMainScreen : Form
     {
+
+        private int loggedAccount;
         public fMainScreen()
         {
             InitializeComponent();
@@ -30,11 +32,22 @@ namespace quanLyLaoDong
             phanCongControl1.Visible = false;
 
         }
+
+        public string AccountInfoTrans{
+            get { return infoLB.Text; }
+            set { infoLB.Text = "Chào " + value + " !"; }
+        }
+
+        public int LoggedAccount
+        {
+            set { loggedAccount = value;}
+        }
        
 
         private void quitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            Close();
         }
 
         private void mainScreenBTN_Click(object sender, EventArgs e)
@@ -111,66 +124,74 @@ namespace quanLyLaoDong
 
         private void editModeBTN_Click(object sender, EventArgs e)
         {
-
-            accountManagerBTN.BackColor = Color.FromArgb(56, 143, 129);
-            accountControl1.Enabled = false;
-            accountControl1.Visible = false;
-            accountManagerBTN.IconColor = Color.FromArgb(126, 199, 174);
-            accountManagerBTN.ForeColor = Color.FromArgb(126, 199, 174);
-
-
-            editModeBTN.BackColor = Color.FromArgb(33, 129, 115);
-            phanCongControl1.Enabled = true;
-            phanCongControl1.Visible = true;
-            editModeBTN.IconColor = Color.White;
-            editModeBTN.ForeColor = Color.White;
-
-            searchBTN.BackColor = Color.FromArgb(56, 143, 129);
-            searchControl1.Enabled = false;
-            searchControl1.Visible = false;
-            searchBTN.IconColor = Color.FromArgb(126, 199, 174);
-            searchBTN.ForeColor = Color.FromArgb(126, 199, 174);
+            if (loggedAccount == 0 || loggedAccount == 1)
+            {
+                accountManagerBTN.BackColor = Color.FromArgb(56, 143, 129);
+                accountControl1.Enabled = false;
+                accountControl1.Visible = false;
+                accountManagerBTN.IconColor = Color.FromArgb(126, 199, 174);
+                accountManagerBTN.ForeColor = Color.FromArgb(126, 199, 174);
 
 
-            mainScreenBTN.BackColor = Color.FromArgb(56, 143, 129);
-            mainScreenBTN.IconColor = Color.FromArgb(126, 199, 174);
-            mainScreenBTN.ForeColor = Color.FromArgb(126, 199, 174);
-            mainMenuControl1.Enabled = false;
-            mainMenuControl1.Visible = false;
+                editModeBTN.BackColor = Color.FromArgb(33, 129, 115);
+                phanCongControl1.Enabled = true;
+                phanCongControl1.Visible = true;
+                editModeBTN.IconColor = Color.White;
+                editModeBTN.ForeColor = Color.White;
+
+                searchBTN.BackColor = Color.FromArgb(56, 143, 129);
+                searchControl1.Enabled = false;
+                searchControl1.Visible = false;
+                searchBTN.IconColor = Color.FromArgb(126, 199, 174);
+                searchBTN.ForeColor = Color.FromArgb(126, 199, 174);
+
+
+                mainScreenBTN.BackColor = Color.FromArgb(56, 143, 129);
+                mainScreenBTN.IconColor = Color.FromArgb(126, 199, 174);
+                mainScreenBTN.ForeColor = Color.FromArgb(126, 199, 174);
+                mainMenuControl1.Enabled = false;
+                mainMenuControl1.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản không đủ điều kiện truy cập", "Không có quyền truy cập");
+            }
+            
 
 
         }
 
         private void accountManagerBTN_Click(object sender, EventArgs e)
         {
+           
+                accountManagerBTN.BackColor = Color.FromArgb(33, 129, 115);
+                accountControl1.Enabled = true;
+                accountControl1.Visible = true;
+                accountManagerBTN.IconColor = Color.White;
+                accountManagerBTN.ForeColor = Color.White;
+                accountControl1.LoggedAccount = this.loggedAccount;
 
-            accountManagerBTN.BackColor = Color.FromArgb(33, 129, 115);
-            accountControl1.Enabled = true;
-            accountControl1.Visible = true;
-            accountManagerBTN.IconColor = Color.White;
-            accountManagerBTN.ForeColor = Color.White;
+                editModeBTN.BackColor = Color.FromArgb(56, 143, 129);
+                phanCongControl1.Enabled = false;
+                phanCongControl1.Visible = false;
+                editModeBTN.IconColor = Color.FromArgb(126, 199, 174);
+                editModeBTN.ForeColor = Color.FromArgb(126, 199, 174);
+
+                searchBTN.BackColor = Color.FromArgb(56, 143, 129);
+
+                searchControl1.Enabled = false;
+                searchControl1.Visible = false;
+                searchBTN.IconColor = Color.FromArgb(126, 199, 174);
+                searchBTN.ForeColor = Color.FromArgb(126, 199, 174);
 
 
-            editModeBTN.BackColor = Color.FromArgb(56, 143, 129);
-            phanCongControl1.Enabled = false;
-            phanCongControl1.Visible = false;
-            editModeBTN.IconColor = Color.FromArgb(126, 199, 174);
-            editModeBTN.ForeColor = Color.FromArgb(126, 199, 174);
+                mainScreenBTN.BackColor = Color.FromArgb(56, 143, 129);
+                mainScreenBTN.IconColor = Color.FromArgb(126, 199, 174);
+                mainScreenBTN.ForeColor = Color.FromArgb(126, 199, 174);
+                mainMenuControl1.Enabled = false;
+                mainMenuControl1.Visible = false;
 
-            searchBTN.BackColor = Color.FromArgb(56, 143, 129);
-
-            searchControl1.Enabled = false;
-            searchControl1.Visible = false;
-            searchBTN.IconColor = Color.FromArgb(126, 199, 174);
-            searchBTN.ForeColor = Color.FromArgb(126, 199, 174);
-
-
-            mainScreenBTN.BackColor = Color.FromArgb(56, 143, 129);
-            mainScreenBTN.IconColor = Color.FromArgb(126, 199, 174);
-            mainScreenBTN.ForeColor = Color.FromArgb(126, 199, 174);
-            mainMenuControl1.Enabled = false;
-            mainMenuControl1.Visible = false;
-
+  
         }
 
 

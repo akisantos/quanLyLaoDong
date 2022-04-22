@@ -37,12 +37,14 @@
             this.searchBTN = new FontAwesome.Sharp.IconButton();
             this.mainScreenBTN = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.mainMenuControl1 = new quanLyLaoDong.mainMenuControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.accountControl1 = new quanLyLaoDong.accountControl();
-            this.phanCongControl1 = new quanLyLaoDong.phanCongControl();
-            this.searchControl1 = new quanLyLaoDong.searchControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mainMenuControl1 = new quanLyLaoDong.mainMenuControl();
+            this.searchControl1 = new quanLyLaoDong.searchControl();
+            this.phanCongControl1 = new quanLyLaoDong.phanCongControl();
+            this.accountControl1 = new quanLyLaoDong.accountControl();
+            this.infoLB = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +53,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(143)))), ((int)(((byte)(129)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.infoLB);
             this.panel1.Controls.Add(this.helloTxt);
             this.panel1.Controls.Add(this.quitButton);
             this.panel1.Controls.Add(this.accountManagerBTN);
@@ -182,14 +186,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 625);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // mainMenuControl1
-            // 
-            this.mainMenuControl1.BackColor = System.Drawing.Color.White;
-            this.mainMenuControl1.Location = new System.Drawing.Point(142, 0);
-            this.mainMenuControl1.Name = "mainMenuControl1";
-            this.mainMenuControl1.Size = new System.Drawing.Size(1109, 625);
-            this.mainMenuControl1.TabIndex = 2;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(143)))), ((int)(((byte)(129)))));
@@ -200,24 +196,23 @@
             this.panel2.Size = new System.Drawing.Size(142, 113);
             this.panel2.TabIndex = 3;
             // 
-            // accountControl1
+            // pictureBox1
             // 
-            this.accountControl1.BackColor = System.Drawing.Color.White;
-            this.accountControl1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.accountControl1.Location = new System.Drawing.Point(142, 0);
-            this.accountControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.accountControl1.Name = "accountControl1";
-            this.accountControl1.Size = new System.Drawing.Size(1109, 625);
-            this.accountControl1.TabIndex = 4;
+            this.pictureBox1.Image = global::quanLyLaoDong.Properties.Resources.firmefoxm_icon_by_imyamak_de8uzca;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // phanCongControl1
+            // mainMenuControl1
             // 
-            this.phanCongControl1.BackColor = System.Drawing.Color.White;
-            this.phanCongControl1.Location = new System.Drawing.Point(142, 0);
-            this.phanCongControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.phanCongControl1.Name = "phanCongControl1";
-            this.phanCongControl1.Size = new System.Drawing.Size(1109, 625);
-            this.phanCongControl1.TabIndex = 5;
+            this.mainMenuControl1.BackColor = System.Drawing.Color.White;
+            this.mainMenuControl1.Location = new System.Drawing.Point(142, 0);
+            this.mainMenuControl1.Name = "mainMenuControl1";
+            this.mainMenuControl1.Size = new System.Drawing.Size(1109, 625);
+            this.mainMenuControl1.TabIndex = 2;
             // 
             // searchControl1
             // 
@@ -229,15 +224,46 @@
             this.searchControl1.Size = new System.Drawing.Size(1109, 625);
             this.searchControl1.TabIndex = 6;
             // 
-            // pictureBox1
+            // phanCongControl1
             // 
-            this.pictureBox1.Image = global::quanLyLaoDong.Properties.Resources.firmefoxm_icon_by_imyamak_de8uzca;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.phanCongControl1.BackColor = System.Drawing.Color.White;
+            this.phanCongControl1.Location = new System.Drawing.Point(142, 0);
+            this.phanCongControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.phanCongControl1.Name = "phanCongControl1";
+            this.phanCongControl1.Size = new System.Drawing.Size(1109, 625);
+            this.phanCongControl1.TabIndex = 5;
+            // 
+            // accountControl1
+            // 
+            this.accountControl1.BackColor = System.Drawing.Color.White;
+            this.accountControl1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.accountControl1.Location = new System.Drawing.Point(142, 0);
+            this.accountControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.accountControl1.Name = "accountControl1";
+            this.accountControl1.Size = new System.Drawing.Size(1109, 625);
+            this.accountControl1.TabIndex = 4;
+            // 
+            // infoLB
+            // 
+            this.infoLB.AutoSize = true;
+            this.infoLB.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLB.ForeColor = System.Drawing.Color.White;
+            this.infoLB.Location = new System.Drawing.Point(3, 484);
+            this.infoLB.Name = "infoLB";
+            this.infoLB.Size = new System.Drawing.Size(54, 13);
+            this.infoLB.TabIndex = 6;
+            this.infoLB.Text = "Xin chào!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 502);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Phiên bản 0.0.0.0";
             // 
             // fMainScreen
             // 
@@ -252,7 +278,7 @@
             this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.phanCongControl1);
             this.Controls.Add(this.accountControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -282,5 +308,7 @@
         private phanCongControl phanCongControl1;
         private searchControl searchControl1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label infoLB;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -36,29 +36,18 @@ namespace quanLyLaoDong
 
 
                 Button statusButton = new FontAwesome.Sharp.IconButton();
-                statusButton.Text = "Dự án: "+ item.Name +"\nNgày khởi công: "+item.NgayKhoiCong+"\nNgày cấp phép: "+ item.NgayCapPhep + "\nNgày hoàn thành dự kiến: " + item.NgayHoanThanhDuKien;
+                statusButton.Text = "Dự án: "+ item.Name +"\nNgày khởi công: "+ DateTime.Parse(item.NgayKhoiCong).ToShortDateString()+"\nNgày cấp phép: " + DateTime.Parse(item.NgayCapPhep).ToShortDateString()  + "\nNgày hoàn thành dự kiến: " + DateTime.Parse(item.NgayHoanThanhDuKien).ToShortDateString();
                 statusButton.Width = 250;
-                statusButton.Height = 120;
-                statusButton.BackColor = Color.FromArgb(0, 223, 246, 255);
-                statusButton.ForeColor = Color.FromArgb(1, 5, 19, 103);
+                statusButton.Height = 320;
+                statusButton.BackColor = Color.FromArgb(255, 255, 255);
+                statusButton.ForeColor = Color.FromArgb(33, 129, 115);
                 statusButton.FlatStyle = FlatStyle.Flat;
                 statusButton.TextAlign = ContentAlignment.MiddleLeft;
                 statusButton.Click += button_Click;
+                
                 statusPanel.Controls.Add(statusButton);
             }
-            /*
-            Button statusButton = new FontAwesome.Sharp.IconButton();
-            statusButton.Text = "Dự án Aki \nNgày khởi công: 03 / 02 / 2018\nSố lượng nhân viên: 100\nPhòng quản lý: Phòng quản lý dự án 01";
-            statusButton.Width = 250;
-            statusButton.Height = 120;
-            statusButton.BackColor = Color.FromArgb(0, 223, 246, 255);
-            statusButton.ForeColor = Color.FromArgb(1, 5, 19, 103);
-            statusButton.FlatStyle = FlatStyle.Flat;
-            statusButton.TextAlign = ContentAlignment.MiddleLeft;
-            statusButton.Click += button_Click;
-            statusPanel.Controls.Add(statusButton);
-
-            */
+           
         }
 
         #endregion

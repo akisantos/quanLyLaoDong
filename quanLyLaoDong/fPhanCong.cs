@@ -44,8 +44,8 @@ namespace quanLyLaoDong
             {
                 foreach (var item in list)
                 {
-                    if (item.GioiTinh == false) nhanVienGridView.Rows.Add(item.Id, item.TenNV, item.NgaySinh, "Nam", item.DiaChi, item.MaPhong);
-                    else nhanVienGridView.Rows.Add(item.Id, item.TenNV, item.NgaySinh, "Nữ", item.DiaChi, item.MaPhong);
+                    if (item.GioiTinh == false) nhanVienGridView.Rows.Add(item.Id, item.TenNV, DateTime.Parse(item.NgaySinh).ToShortDateString(), "Nam", item.DiaChi, item.MaPhong);
+                    else nhanVienGridView.Rows.Add(item.Id, item.TenNV, DateTime.Parse(item.NgaySinh).ToShortDateString(), "Nữ", item.DiaChi, item.MaPhong);
                 }
             }
             else
@@ -54,8 +54,8 @@ namespace quanLyLaoDong
                 {
                     foreach (var item in list)
                     {
-                        if (item.GioiTinh == false) nhanVienGridView.Rows.Add(item.Id, item.TenNV, item.NgaySinh, "Nam", item.DiaChi, item.MaPhong);
-                        else nhanVienGridView.Rows.Add(item.Id, item.TenNV, item.NgaySinh, "Nữ", item.DiaChi, item.MaPhong);
+                        if (item.GioiTinh == false) nhanVienGridView.Rows.Add(item.Id, item.TenNV, DateTime.Parse(item.NgaySinh).ToShortDateString(), "Nam", item.DiaChi, item.MaPhong);
+                        else nhanVienGridView.Rows.Add(item.Id, item.TenNV, DateTime.Parse(item.NgaySinh).ToShortDateString(), "Nữ", item.DiaChi, item.MaPhong);
                     }
                 }
                 else
@@ -70,8 +70,8 @@ namespace quanLyLaoDong
                
                         foreach (var item2 in item)
                         {
-                            if (item2.GioiTinh == false) nhanVienGridView.Rows.Add(item2.Id, item2.TenNV, item2.NgaySinh, "Nam", item2.DiaChi, item2.MaPhong);
-                            else nhanVienGridView.Rows.Add(item2.Id, item2.TenNV, item2.NgaySinh, "Nữ", item2.DiaChi, item2.MaPhong);
+                            if (item2.GioiTinh == false) nhanVienGridView.Rows.Add(item2.Id, item2.TenNV, DateTime.Parse(item2.NgaySinh).ToShortDateString(), "Nam", item2.DiaChi, item2.MaPhong);
+                            else nhanVienGridView.Rows.Add(item2.Id, item2.TenNV, DateTime.Parse(item2.NgaySinh).ToShortDateString(), "Nữ", item2.DiaChi, item2.MaPhong);
                         }
 
                     }

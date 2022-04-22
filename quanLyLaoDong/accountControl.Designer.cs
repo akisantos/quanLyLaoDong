@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.hiTB = new System.Windows.Forms.Label();
@@ -51,7 +53,6 @@
             this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.congTrinhDelBtn = new FontAwesome.Sharp.IconButton();
-            this.congTrinhEditBtn = new FontAwesome.Sharp.IconButton();
             this.searchCongTrinhBtn = new FontAwesome.Sharp.IconButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.nvXoaBTN = new FontAwesome.Sharp.IconButton();
@@ -72,6 +73,19 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.accountDataGridView = new System.Windows.Forms.DataGridView();
+            this.maAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.accountAddBTN = new FontAwesome.Sharp.IconButton();
+            this.accountDelBTN = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.accountTypeCB = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.inputPassTB = new System.Windows.Forms.TextBox();
+            this.inpuUsernameTB = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.adminViewTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -84,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.phongBanDataGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,11 +124,11 @@
             // 
             this.hiTB.AutoSize = true;
             this.hiTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.hiTB.Location = new System.Drawing.Point(40, 63);
+            this.hiTB.Location = new System.Drawing.Point(36, 59);
             this.hiTB.Name = "hiTB";
-            this.hiTB.Size = new System.Drawing.Size(98, 21);
+            this.hiTB.Size = new System.Drawing.Size(292, 21);
             this.hiTB.TabIndex = 1;
-            this.hiTB.Text = "Xin chào aki!";
+            this.hiTB.Text = "Quản lý thông tin các thông tin liên quan";
             // 
             // label1
             // 
@@ -165,20 +180,21 @@
             // 
             this.congTrinhDataGridView.AllowUserToAddRows = false;
             this.congTrinhDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle83.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.congTrinhDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle83;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.congTrinhDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.congTrinhDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.congTrinhDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.congTrinhDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.congTrinhDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle84.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle84.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.congTrinhDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle84;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.congTrinhDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.congTrinhDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.congTrinhDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCongTrinh,
@@ -191,6 +207,7 @@
             this.congTrinhDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.congTrinhDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.congTrinhDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.congTrinhDataGridView.MultiSelect = false;
             this.congTrinhDataGridView.Name = "congTrinhDataGridView";
             this.congTrinhDataGridView.ReadOnly = true;
             this.congTrinhDataGridView.RowTemplate.Height = 50;
@@ -243,7 +260,6 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.congTrinhDelBtn);
-            this.panel3.Controls.Add(this.congTrinhEditBtn);
             this.panel3.Controls.Add(this.searchCongTrinhBtn);
             this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
@@ -258,7 +274,7 @@
             this.congTrinhDelBtn.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.congTrinhDelBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
             this.congTrinhDelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.congTrinhDelBtn.Location = new System.Drawing.Point(265, 12);
+            this.congTrinhDelBtn.Location = new System.Drawing.Point(134, 12);
             this.congTrinhDelBtn.Name = "congTrinhDelBtn";
             this.congTrinhDelBtn.Size = new System.Drawing.Size(125, 64);
             this.congTrinhDelBtn.TabIndex = 4;
@@ -266,23 +282,6 @@
             this.congTrinhDelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.congTrinhDelBtn.UseVisualStyleBackColor = true;
             this.congTrinhDelBtn.Click += new System.EventHandler(this.congTrinhDelBtn_Click);
-            // 
-            // congTrinhEditBtn
-            // 
-            this.congTrinhEditBtn.BackColor = System.Drawing.Color.White;
-            this.congTrinhEditBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
-            this.congTrinhEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.congTrinhEditBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
-            this.congTrinhEditBtn.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.congTrinhEditBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
-            this.congTrinhEditBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.congTrinhEditBtn.Location = new System.Drawing.Point(134, 12);
-            this.congTrinhEditBtn.Name = "congTrinhEditBtn";
-            this.congTrinhEditBtn.Size = new System.Drawing.Size(125, 64);
-            this.congTrinhEditBtn.TabIndex = 3;
-            this.congTrinhEditBtn.Text = "Sửa";
-            this.congTrinhEditBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.congTrinhEditBtn.UseVisualStyleBackColor = false;
             // 
             // searchCongTrinhBtn
             // 
@@ -377,20 +376,21 @@
             // 
             this.nhanVienGridView.AllowUserToAddRows = false;
             this.nhanVienGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle79.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle79.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.nhanVienGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.nhanVienGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.nhanVienGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.nhanVienGridView.BackgroundColor = System.Drawing.Color.White;
+            this.nhanVienGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nhanVienGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle80.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle80.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle80.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.nhanVienGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.nhanVienGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.nhanVienGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.nhanVienGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.intMaNhanVien,
@@ -401,6 +401,7 @@
             this.txtMaPhongQL});
             this.nhanVienGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.nhanVienGridView.Location = new System.Drawing.Point(6, 94);
+            this.nhanVienGridView.MultiSelect = false;
             this.nhanVienGridView.Name = "nhanVienGridView";
             this.nhanVienGridView.ReadOnly = true;
             this.nhanVienGridView.RowTemplate.Height = 50;
@@ -501,26 +502,28 @@
             // 
             this.phongBanDataGridView.AllowUserToAddRows = false;
             this.phongBanDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle81.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle81.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.phongBanDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.phongBanDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.phongBanDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.phongBanDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.phongBanDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phongBanDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle82.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle82.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.phongBanDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle82;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.phongBanDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.phongBanDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.phongBanDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.intMaPhong,
             this.dataGridViewTextBoxColumn8});
             this.phongBanDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.phongBanDataGridView.Location = new System.Drawing.Point(3, 100);
+            this.phongBanDataGridView.MultiSelect = false;
             this.phongBanDataGridView.Name = "phongBanDataGridView";
             this.phongBanDataGridView.ReadOnly = true;
             this.phongBanDataGridView.RowTemplate.Height = 50;
@@ -543,6 +546,7 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.accountDataGridView);
+            this.tabPage4.Controls.Add(this.panel5);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -553,11 +557,176 @@
             // 
             // accountDataGridView
             // 
+            this.accountDataGridView.AllowUserToAddRows = false;
+            this.accountDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.accountDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
+            this.accountDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.accountDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.accountDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.accountDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(139)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.accountDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.accountDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accountDataGridView.Location = new System.Drawing.Point(3, 6);
+            this.accountDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maAccount,
+            this.tenDangNhap,
+            this.accountType});
+            this.accountDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.accountDataGridView.Location = new System.Drawing.Point(6, 7);
+            this.accountDataGridView.MultiSelect = false;
             this.accountDataGridView.Name = "accountDataGridView";
-            this.accountDataGridView.Size = new System.Drawing.Size(569, 460);
-            this.accountDataGridView.TabIndex = 0;
+            this.accountDataGridView.ReadOnly = true;
+            this.accountDataGridView.RowTemplate.Height = 50;
+            this.accountDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.accountDataGridView.Size = new System.Drawing.Size(567, 459);
+            this.accountDataGridView.TabIndex = 3;
+            this.accountDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountDataGridView_CellClick);
+            // 
+            // maAccount
+            // 
+            this.maAccount.HeaderText = "ID";
+            this.maAccount.Name = "maAccount";
+            this.maAccount.ReadOnly = true;
+            this.maAccount.Visible = false;
+            // 
+            // tenDangNhap
+            // 
+            this.tenDangNhap.HeaderText = "Tên đăng nhập";
+            this.tenDangNhap.Name = "tenDangNhap";
+            this.tenDangNhap.ReadOnly = true;
+            // 
+            // accountType
+            // 
+            this.accountType.HeaderText = "Phân loại";
+            this.accountType.Name = "accountType";
+            this.accountType.ReadOnly = true;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel5.Controls.Add(this.accountAddBTN);
+            this.panel5.Controls.Add(this.accountDelBTN);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.accountTypeCB);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.inputPassTB);
+            this.panel5.Controls.Add(this.inpuUsernameTB);
+            this.panel5.Location = new System.Drawing.Point(579, 7);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(515, 459);
+            this.panel5.TabIndex = 1;
+            // 
+            // accountAddBTN
+            // 
+            this.accountAddBTN.BackColor = System.Drawing.Color.White;
+            this.accountAddBTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.accountAddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accountAddBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.accountAddBTN.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.accountAddBTN.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.accountAddBTN.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.accountAddBTN.IconSize = 32;
+            this.accountAddBTN.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.accountAddBTN.Location = new System.Drawing.Point(253, 203);
+            this.accountAddBTN.Name = "accountAddBTN";
+            this.accountAddBTN.Size = new System.Drawing.Size(121, 42);
+            this.accountAddBTN.TabIndex = 9;
+            this.accountAddBTN.Text = "Thêm";
+            this.accountAddBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.accountAddBTN.UseVisualStyleBackColor = false;
+            this.accountAddBTN.Click += new System.EventHandler(this.accountAddBTN_Click);
+            // 
+            // accountDelBTN
+            // 
+            this.accountDelBTN.BackColor = System.Drawing.Color.White;
+            this.accountDelBTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.accountDelBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accountDelBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.accountDelBTN.IconChar = FontAwesome.Sharp.IconChar.UserAltSlash;
+            this.accountDelBTN.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.accountDelBTN.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.accountDelBTN.IconSize = 32;
+            this.accountDelBTN.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.accountDelBTN.Location = new System.Drawing.Point(380, 203);
+            this.accountDelBTN.Name = "accountDelBTN";
+            this.accountDelBTN.Size = new System.Drawing.Size(121, 42);
+            this.accountDelBTN.TabIndex = 7;
+            this.accountDelBTN.Text = "Xóa";
+            this.accountDelBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.accountDelBTN.UseVisualStyleBackColor = false;
+            this.accountDelBTN.Click += new System.EventHandler(this.accountDelBTN_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(376, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 21);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Phân loại";
+            // 
+            // accountTypeCB
+            // 
+            this.accountTypeCB.BackColor = System.Drawing.Color.White;
+            this.accountTypeCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accountTypeCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.accountTypeCB.FormattingEnabled = true;
+            this.accountTypeCB.Location = new System.Drawing.Point(380, 154);
+            this.accountTypeCB.Name = "accountTypeCB";
+            this.accountTypeCB.Size = new System.Drawing.Size(121, 29);
+            this.accountTypeCB.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 21);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Mật khẩu";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tên đăng nhập";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tài khoản";
+            // 
+            // inputPassTB
+            // 
+            this.inputPassTB.Location = new System.Drawing.Point(17, 154);
+            this.inputPassTB.Name = "inputPassTB";
+            this.inputPassTB.Size = new System.Drawing.Size(357, 29);
+            this.inputPassTB.TabIndex = 1;
+            // 
+            // inpuUsernameTB
+            // 
+            this.inpuUsernameTB.Location = new System.Drawing.Point(17, 91);
+            this.inpuUsernameTB.Name = "inpuUsernameTB";
+            this.inpuUsernameTB.Size = new System.Drawing.Size(484, 29);
+            this.inpuUsernameTB.TabIndex = 0;
             // 
             // accountControl
             // 
@@ -583,6 +752,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.phongBanDataGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -602,7 +773,6 @@
         private FontAwesome.Sharp.IconButton searchCongTrinhBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView congTrinhDataGridView;
-        private System.Windows.Forms.DataGridView accountDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCongTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaDiem;
@@ -615,7 +785,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton addNVBTN;
         private FontAwesome.Sharp.IconButton congTrinhDelBtn;
-        private FontAwesome.Sharp.IconButton congTrinhEditBtn;
         private System.Windows.Forms.DataGridView phongBanDataGridView;
         private FontAwesome.Sharp.IconButton phongBanDeleteBtn;
         private FontAwesome.Sharp.IconButton iconButton7;
@@ -627,5 +796,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtMaPhongQL;
         private System.Windows.Forms.DataGridViewTextBoxColumn intMaPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView accountDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maAccount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenDangNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accountType;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox inputPassTB;
+        private System.Windows.Forms.TextBox inpuUsernameTB;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox accountTypeCB;
+        private FontAwesome.Sharp.IconButton accountAddBTN;
+        private FontAwesome.Sharp.IconButton accountDelBTN;
     }
 }

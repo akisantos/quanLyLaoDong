@@ -1,4 +1,5 @@
 ﻿using quanLyLaoDong.DAO;
+using quanLyLaoDong.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,10 +26,24 @@ namespace quanLyLaoDong
             string password = passwordTB.Text;
             if (Login(userName, password))
             {
+                int accountType = 0;
+                List<Account> list = AccountDAO.Instance.Login(userName, password);
+                foreach (var item in list)
+                {
+                    if (item.AccountUsername == userName && item.AccountPassword == password)
+                    {
+                        accountType = item.AccountType;
+                    }
+                }
+
                 this.Hide();
                 fMainScreen fMainScreenHolder = new fMainScreen();
+                fMainScreenHolder.AccountInfoTrans = userName;
+                fMainScreenHolder.LoggedAccount = accountType;
                 fMainScreenHolder.ShowDialog();
+                passwordTB.Text = "";
                 this.Show();
+
             }
             else
             {
@@ -39,7 +54,12 @@ namespace quanLyLaoDong
 
         bool Login(string userName, string password)
         {
-            return AccountDAO.Instance.Login(userName, password);
+            List<Account> list =  AccountDAO.Instance.Login(userName, password);
+            if (list.Any())
+            {
+                return true;
+            }
+            return false;
         }
 
         private void exitBTN_Click(object sender, EventArgs e)
