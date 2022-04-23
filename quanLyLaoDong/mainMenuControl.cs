@@ -14,11 +14,13 @@ namespace quanLyLaoDong
 {
     public partial class mainMenuControl : UserControl
     {
+
         public mainMenuControl()
         {
             InitializeComponent();
 
             loadProjectStatusTest();
+
         }
 
         private void statusPanel_Paint(object sender, PaintEventArgs e)
@@ -30,22 +32,31 @@ namespace quanLyLaoDong
         void loadProjectStatusTest()
         {
             List<CongTrinh> congTrinhList = CongTrinhDAO.Instance.LoadCongTrinh();
-
+            List<PhanCong> phanCongList = PhanCongDAO.Instance.LoadPhanCong();
+            List<PhongBan> phongBanList = PhongBanDAO.Instance.LoadPhongBan();
+            int NV = 0;
+            string tenPhong = "";
             foreach (var item in congTrinhList)
             {
+                foreach (var item2 in phanCongList)
+                {
+                    if (item2.MaCongTrinh == item.Id) NV++;
+                }
+                foreach (var item3 in phongBanList)
+                {
+                    if (item3.MaPhong == item.MaPhongQL) tenPhong = item3.TenPhong;
+                }
 
-
-                Button statusButton = new FontAwesome.Sharp.IconButton();
-                statusButton.Text = "Dự án: "+ item.Name +"\nNgày khởi công: "+ DateTime.Parse(item.NgayKhoiCong).ToShortDateString()+"\nNgày cấp phép: " + DateTime.Parse(item.NgayCapPhep).ToShortDateString()  + "\nNgày hoàn thành dự kiến: " + DateTime.Parse(item.NgayHoanThanhDuKien).ToShortDateString();
-                statusButton.Width = 250;
-                statusButton.Height = 320;
-                statusButton.BackColor = Color.FromArgb(255, 255, 255);
-                statusButton.ForeColor = Color.FromArgb(33, 129, 115);
-                statusButton.FlatStyle = FlatStyle.Flat;
-                statusButton.TextAlign = ContentAlignment.MiddleLeft;
-                statusButton.Click += button_Click;
-                
-                statusPanel.Controls.Add(statusButton);
+                projectInfo ttda = new projectInfo();
+                ttda.tenCongTrinhTrans = item.Name;
+                ttda.tenPhongBanTras = tenPhong;
+                ttda.ngayCapPhepTrans = item.NgayCapPhep;
+                ttda.NgayKhoiCongTrans = item.NgayKhoiCong;
+                ttda.ngayHoanThanhTrans = item.NgayHoanThanhDuKien;
+                ttda.soNguoiTrans = NV;
+               
+                statusPanel.Controls.Add(ttda);
+                NV = 0; tenPhong = "";
             }
            
         }

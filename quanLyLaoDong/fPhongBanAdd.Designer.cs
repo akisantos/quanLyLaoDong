@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPhongBanAdd));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TenPhongTB = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@
             this.TenPhongTB.Name = "TenPhongTB";
             this.TenPhongTB.Size = new System.Drawing.Size(290, 29);
             this.TenPhongTB.TabIndex = 2;
+            this.TenPhongTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TenPhongTB_KeyPress);
             // 
             // iconButton2
             // 
@@ -100,6 +102,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "fPhongBanAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

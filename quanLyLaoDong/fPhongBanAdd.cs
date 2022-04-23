@@ -39,21 +39,41 @@ namespace quanLyLaoDong
             DataColumn[] key = new DataColumn[1];
             key[0] = dt.Columns["MaPhong"];
             dt.PrimaryKey = key;
-
-            for (int i = 0; i < dt.Rows.Count + 1; i++)
+            int holder = 0;
+            for (int i = 1; i < dt.Rows.Count + 1; i++)
             {
                 if (!dt.Rows.Contains(i))
                 {
                     return i;
                 }
+
+                holder = i;
             }
 
-            return 0;
+            return holder + 1;
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void TenPhongTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                string ten = TenPhongTB.Text;
+                if (ten != "" || ten != null)
+                {
+                    int id = CapID();
+                    DataProvider.Instance.ExcuteQuery("PhongBanAdd @MaPhong , @TenPhongBan", new object[] { id, ten });
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Chú ý chưa nhập đủ thông tin!", "Thông báo");
+                }
+            }
         }
     }
 }

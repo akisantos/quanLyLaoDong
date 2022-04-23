@@ -59,7 +59,6 @@ namespace quanLyLaoDong
             {
                 MessageBox.Show("Chú ý chưa nhập đủ thông tin!", "Thông báo");
             }
-           
 
 
         }
@@ -71,7 +70,7 @@ namespace quanLyLaoDong
             key[0] = dt.Columns["MaNhanVien"];
             dt.PrimaryKey = key;
 
-            for (int i = 0; i < dt.Rows.Count + 1; i++)
+            for (int i = 1; i < dt.Rows.Count + 1; i++)
             {
                 if (!dt.Rows.Contains(i))
                 {

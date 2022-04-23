@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPhanCong));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.phancongTab = new System.Windows.Forms.TabControl();
@@ -58,7 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.congTrinhCB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.nvTab = new System.Windows.Forms.TabPage();
             this.phancongTab.SuspendLayout();
             this.congTrinhTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.confirmDataGridView)).BeginInit();
@@ -86,7 +86,6 @@
             // phancongTab
             // 
             this.phancongTab.Controls.Add(this.congTrinhTab);
-            this.phancongTab.Controls.Add(this.nvTab);
             this.phancongTab.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.phancongTab.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.phancongTab.Location = new System.Drawing.Point(0, 76);
@@ -354,16 +353,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Công trình";
             // 
-            // nvTab
-            // 
-            this.nvTab.Location = new System.Drawing.Point(4, 30);
-            this.nvTab.Name = "nvTab";
-            this.nvTab.Padding = new System.Windows.Forms.Padding(3);
-            this.nvTab.Size = new System.Drawing.Size(1304, 566);
-            this.nvTab.TabIndex = 1;
-            this.nvTab.Text = "Theo nhân viên";
-            this.nvTab.UseVisualStyleBackColor = true;
-            // 
             // fPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,8 +361,9 @@
             this.Controls.Add(this.phancongTab);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fPhanCong";
-            this.Text = "fPhanCong";
+            this.Text = "Thêm phân công mới";
             this.phancongTab.ResumeLayout(false);
             this.congTrinhTab.ResumeLayout(false);
             this.congTrinhTab.PerformLayout();
@@ -394,7 +384,6 @@
         private System.Windows.Forms.TabPage congTrinhTab;
         private System.Windows.Forms.ComboBox congTrinhCB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage nvTab;
         private System.Windows.Forms.DataGridView nhanVienGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn intMaNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtTenNhanVien;

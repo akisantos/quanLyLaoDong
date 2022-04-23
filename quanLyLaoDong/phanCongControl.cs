@@ -117,5 +117,40 @@ namespace quanLyLaoDong
                 LoadPhanCong();
             }
         }
+
+        private void phanCongDataGridView_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void searchPCBTN_Click(object sender, EventArgs e)
+        {
+            Search(searchPCTB.Text, phanCongDataGridView);
+        }
+
+        void Search(string searchQ, DataGridView grid)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in grid.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Equals(searchQ))
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                    else if (row.Cells[1].Value.ToString().ToLower().Contains(searchQ))
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+        }
     }
 }

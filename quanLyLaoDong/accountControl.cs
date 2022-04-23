@@ -133,9 +133,7 @@ namespace quanLyLaoDong
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            if (checkTaiKhoanHopLe(loggedAccount)) UpdateDataNV();
-
-
+            UpdateDataNV();
         }
 
         private void nhanVienGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -302,7 +300,6 @@ namespace quanLyLaoDong
                 {
                     string q = "select MaAccount from dbo.Account where userName='" + userName + "'";
                     int checkIsExist = DataProvider.Instance.ExcuteNonQuery(q);
-
                     if (checkIsExist > 0)
                     {
                         MessageBox.Show("Tên đăng nhập đã tồn tại", "Thông báo");
@@ -339,6 +336,70 @@ namespace quanLyLaoDong
             }
 
             return 0;
+        }
+
+        private void searchCTBTN_Click(object sender, EventArgs e)
+        {
+            Search(searchContentCongTrinhTB.Text, congTrinhDataGridView);
+        }
+
+
+        private void searchContentCongTrinhTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                Search(searchContentCongTrinhTB.Text, congTrinhDataGridView);
+            }
+        }
+
+        private void searchNVBTN_Click(object sender, EventArgs e)
+        {
+            Search(searchNVTB.Text, nhanVienGridView);
+        }
+
+        private void searchNVTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                Search(searchNVTB.Text, nhanVienGridView);
+            }
+        }
+
+        private void searchPBBTN_Click(object sender, EventArgs e)
+        {
+            Search(searchPBTB.Text, phongBanDataGridView);
+        }
+
+
+
+        void Search(string searchQ, DataGridView grid)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in grid.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Equals(searchQ))
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                    else if (row.Cells[1].Value.ToString().ToLower().Contains(searchQ))
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+        }
+
+        private void searchPBTB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

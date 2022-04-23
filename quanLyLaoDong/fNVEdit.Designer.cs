@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fNVEdit));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.maPhongQLLabel = new System.Windows.Forms.Label();
+            this.nsnv = new System.Windows.Forms.Label();
+            this.gioiTinhNV = new System.Windows.Forms.Label();
             this.msnvLabel = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.updateBtn = new FontAwesome.Sharp.IconButton();
@@ -43,9 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gioiTinhNV = new System.Windows.Forms.Label();
-            this.nsnv = new System.Windows.Forms.Label();
-            this.maPhongQLLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(753, 432);
             this.panel1.TabIndex = 3;
+            // 
+            // maPhongQLLabel
+            // 
+            this.maPhongQLLabel.AutoSize = true;
+            this.maPhongQLLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maPhongQLLabel.Location = new System.Drawing.Point(123, 379);
+            this.maPhongQLLabel.Name = "maPhongQLLabel";
+            this.maPhongQLLabel.Size = new System.Drawing.Size(15, 17);
+            this.maPhongQLLabel.TabIndex = 14;
+            this.maPhongQLLabel.Text = "0";
+            // 
+            // nsnv
+            // 
+            this.nsnv.AutoSize = true;
+            this.nsnv.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nsnv.Location = new System.Drawing.Point(81, 396);
+            this.nsnv.Name = "nsnv";
+            this.nsnv.Size = new System.Drawing.Size(60, 17);
+            this.nsnv.TabIndex = 13;
+            this.nsnv.Text = "1/1/1900";
+            // 
+            // gioiTinhNV
+            // 
+            this.gioiTinhNV.AutoSize = true;
+            this.gioiTinhNV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gioiTinhNV.Location = new System.Drawing.Point(81, 379);
+            this.gioiTinhNV.Name = "gioiTinhNV";
+            this.gioiTinhNV.Size = new System.Drawing.Size(36, 17);
+            this.gioiTinhNV.TabIndex = 12;
+            this.gioiTinhNV.Text = "Nam";
             // 
             // msnvLabel
             // 
@@ -215,36 +246,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Chỉnh sửa thông tin nhân viên";
             // 
-            // gioiTinhNV
-            // 
-            this.gioiTinhNV.AutoSize = true;
-            this.gioiTinhNV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gioiTinhNV.Location = new System.Drawing.Point(81, 379);
-            this.gioiTinhNV.Name = "gioiTinhNV";
-            this.gioiTinhNV.Size = new System.Drawing.Size(36, 17);
-            this.gioiTinhNV.TabIndex = 12;
-            this.gioiTinhNV.Text = "Nam";
-            // 
-            // nsnv
-            // 
-            this.nsnv.AutoSize = true;
-            this.nsnv.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nsnv.Location = new System.Drawing.Point(81, 396);
-            this.nsnv.Name = "nsnv";
-            this.nsnv.Size = new System.Drawing.Size(60, 17);
-            this.nsnv.TabIndex = 13;
-            this.nsnv.Text = "1/1/1900";
-            // 
-            // maPhongQLLabel
-            // 
-            this.maPhongQLLabel.AutoSize = true;
-            this.maPhongQLLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maPhongQLLabel.Location = new System.Drawing.Point(123, 379);
-            this.maPhongQLLabel.Name = "maPhongQLLabel";
-            this.maPhongQLLabel.Size = new System.Drawing.Size(15, 17);
-            this.maPhongQLLabel.TabIndex = 14;
-            this.maPhongQLLabel.Text = "0";
-            // 
             // fNVEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,8 +253,9 @@
             this.ClientSize = new System.Drawing.Size(777, 580);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fNVEdit";
-            this.Text = "fNVEdit";
+            this.Text = "Chỉnh sửa thông tin nhân viên";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

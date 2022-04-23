@@ -43,6 +43,8 @@
             this.delBTN = new FontAwesome.Sharp.IconButton();
             this.editBTN = new FontAwesome.Sharp.IconButton();
             this.addPhanCongBTN = new FontAwesome.Sharp.IconButton();
+            this.searchPCBTN = new FontAwesome.Sharp.IconButton();
+            this.searchPCTB = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phanCongDataGridView)).BeginInit();
             this.panel4.SuspendLayout();
@@ -115,6 +117,7 @@
             this.soGio});
             this.phanCongDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.phanCongDataGridView.Location = new System.Drawing.Point(4, 94);
+            this.phanCongDataGridView.MultiSelect = false;
             this.phanCongDataGridView.Name = "phanCongDataGridView";
             this.phanCongDataGridView.ReadOnly = true;
             this.phanCongDataGridView.RowTemplate.Height = 50;
@@ -122,6 +125,7 @@
             this.phanCongDataGridView.Size = new System.Drawing.Size(1101, 409);
             this.phanCongDataGridView.TabIndex = 0;
             this.phanCongDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.phanCongDataGridView_CellDoubleClick);
+            this.phanCongDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phanCongDataGridView_KeyPress);
             // 
             // MaPhanCong
             // 
@@ -149,6 +153,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.searchPCBTN);
+            this.panel4.Controls.Add(this.searchPCTB);
             this.panel4.Controls.Add(this.delBTN);
             this.panel4.Controls.Add(this.editBTN);
             this.panel4.Controls.Add(this.addPhanCongBTN);
@@ -216,6 +222,33 @@
             this.addPhanCongBTN.UseVisualStyleBackColor = false;
             this.addPhanCongBTN.Click += new System.EventHandler(this.addPhanCongBTN_Click);
             // 
+            // searchPCBTN
+            // 
+            this.searchPCBTN.BackColor = System.Drawing.Color.White;
+            this.searchPCBTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(199)))), ((int)(((byte)(174)))));
+            this.searchPCBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchPCBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.searchPCBTN.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchPCBTN.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.searchPCBTN.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchPCBTN.IconSize = 26;
+            this.searchPCBTN.Location = new System.Drawing.Point(983, 34);
+            this.searchPCBTN.Name = "searchPCBTN";
+            this.searchPCBTN.Size = new System.Drawing.Size(117, 29);
+            this.searchPCBTN.TabIndex = 12;
+            this.searchPCBTN.Text = "Tìm kiếm";
+            this.searchPCBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.searchPCBTN.UseVisualStyleBackColor = false;
+            this.searchPCBTN.Click += new System.EventHandler(this.searchPCBTN_Click);
+            // 
+            // searchPCTB
+            // 
+            this.searchPCTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(115)))));
+            this.searchPCTB.Location = new System.Drawing.Point(638, 34);
+            this.searchPCTB.Name = "searchPCTB";
+            this.searchPCTB.Size = new System.Drawing.Size(339, 29);
+            this.searchPCTB.TabIndex = 11;
+            // 
             // phanCongControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +263,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phanCongDataGridView)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +283,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCongTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn soGio;
+        private FontAwesome.Sharp.IconButton searchPCBTN;
+        private System.Windows.Forms.TextBox searchPCTB;
     }
 }

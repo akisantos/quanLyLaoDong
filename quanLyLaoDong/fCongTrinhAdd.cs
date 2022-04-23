@@ -48,7 +48,7 @@ namespace quanLyLaoDong
             key[0] = dt.Columns["MaCongTrinh"];
             dt.PrimaryKey = key;
 
-            for (int i = 0; i < dt.Rows.Count + 1; i++)
+            for (int i =1; i < dt.Rows.Count + 1; i++)
             {
                 if (!dt.Rows.Contains(i))
                 {
@@ -65,6 +65,7 @@ namespace quanLyLaoDong
             string tenCT = ctNameTB.Text;
             string diaDiem = ctPosTB.Text;
             string phongQL = phongQLTB.SelectedValue.ToString();
+            MessageBox.Show(phongQLTB.SelectedValue.ToString());
             DateTime ngayCapPhep = ngayCapPhepDP.Value.Date;
             DateTime ngayKhoiCong = ngayKhoiCongDP.Value.Date;
             DateTime ngayHoanThanh = ngayHoanThanhDP.Value.Date;

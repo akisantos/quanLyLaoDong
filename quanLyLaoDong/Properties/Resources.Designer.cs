@@ -63,6 +63,16 @@ namespace quanLyLaoDong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5_skills_project_management_degree_elmhurst_college_infographic_thumb {
+            get {
+                object obj = ResourceManager.GetObject("5-skills-project-management-degree-elmhurst-college-infographic-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap firmefoxm_icon_by_imyamak_de8uzca {
             get {
                 object obj = ResourceManager.GetObject("firmefoxm_icon_by_imyamak_de8uzca", resourceCulture);

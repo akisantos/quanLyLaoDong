@@ -166,13 +166,20 @@ namespace quanLyLaoDong
                     int MaNV = int.Parse(confirmDataGridView.Rows[i].Cells[0].Value.ToString());
                     int MaCT = int.Parse(confirmDataGridView.Rows[i].Cells[3].Value.ToString());
                     double soGio = double.Parse(confirmDataGridView.Rows[i].Cells[2].Value.ToString());
-
-                    string q = "insert into dbo.PhanCong(MaPhanCong, MaCongTrinh, MaNhanVien, SoGio) values (" + Id + " , " + MaCT + " ," + MaNV + " ," + soGio + ")";
-                    //DataProvider.Instance.ExcuteQuery("addPhanCong @maPhanCong , @maCongTrinh , @maNV , @soGio", new object[] { Id , MaCT, MaNV, soGio });
-                    DataProvider.Instance.ExcuteQuery(q);
+                    if (checkIsExist(MaNV, MaCT))
+                    {
+                        string q = "insert into dbo.PhanCong(MaPhanCong, MaCongTrinh, MaNhanVien, SoGio) values (" + Id + " , " + MaCT + " ," + MaNV + " ," + soGio + ")";
+                        DataProvider.Instance.ExcuteQuery(q);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Trùng lặp dữ liệu!", "Thông báo");
+                    }
+                   
 
                 }
-                Close();
+
             }
             else
             {
@@ -235,6 +242,16 @@ namespace quanLyLaoDong
         private void confirmDataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             
+        }
+
+        bool checkIsExist(int MaNV, int MaCT)
+        {
+            string q = "select * from dbo.PhanCong where MaNhanVien=" + MaNV ;
+            DataTable dt = DataProvider.Instance.ExcuteQuery(q);
+
+            if (dt != null && dt.Rows.Count > 0) return false;
+         
+            return true;
         }
     }
 }
