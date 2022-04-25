@@ -17,6 +17,8 @@ namespace quanLyLaoDong.DAO
             get { if (instance == null) instance = new DataProvider(); return instance; }
             private set { instance = value; }
         }
+
+        //ConnectionString
         private string con = "Data Source=REIKUN;Initial Catalog=quanLyLaoDong;Integrated Security=True";
         
         public DataTable ExcuteQuery(string query, object[] parameter = null)

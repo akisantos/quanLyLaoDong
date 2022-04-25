@@ -48,6 +48,16 @@ namespace quanLyLaoDong
                 }
 
                 projectInfo ttda = new projectInfo();
+                if (DateTime.Parse(item.NgayKhoiCong) < DateTime.Now)
+                {
+                    ttda.BackColor = Color.FromArgb(249, 255, 164);
+                }
+                
+                if (DateTime.Parse(item.NgayKhoiCong) < DateTime.Parse(item.NgayCapPhep)){
+                    ttda.BackColor = Color.FromArgb(253, 93, 93);
+                    ttda.ForeColor = Color.White;
+                }
+                
                 ttda.tenCongTrinhTrans = item.Name;
                 ttda.tenPhongBanTras = tenPhong;
                 ttda.ngayCapPhepTrans = item.NgayCapPhep;

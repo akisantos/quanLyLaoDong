@@ -38,6 +38,7 @@ namespace quanLyLaoDong
 
                 this.Hide();
                 fMainScreen fMainScreenHolder = new fMainScreen();
+                fMainScreenHolder.MaximizeBox = false;
                 fMainScreenHolder.AccountInfoTrans = userName;
                 fMainScreenHolder.LoggedAccount = accountType;
                 fMainScreenHolder.ShowDialog();

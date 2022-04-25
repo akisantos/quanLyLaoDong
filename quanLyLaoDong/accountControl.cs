@@ -234,17 +234,7 @@ namespace quanLyLaoDong
 
         private void accountDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (accountDataGridView.SelectedRows.Count > 0)
-            {
-                int selectedRowIndex = accountDataGridView.SelectedRows[0].Index;
-                DataGridViewRow selectedRow = accountDataGridView.Rows[selectedRowIndex];
-                int maAccount = Convert.ToInt32((selectedRow.Cells["maAccount"].Value));
-                int maType = Convert.ToInt32((selectedRow.Cells["accountType"].Value));
-                inpuUsernameTB.Text = accountDataGridView.Rows[selectedRowIndex].Cells[1].Value.ToString();
-                accountTypeCB.SelectedIndex = maType;
-                
 
-            }
         }
 
         void InitData()
@@ -322,12 +312,11 @@ namespace quanLyLaoDong
 
         int CapID()
         {
-            DataTable dt = DataProvider.Instance.ExcuteQuery("select MaAccount from dbo.Account");
+            DataTable dt = DataProvider.Instance.ExcuteQuery("select * from dbo.Account");
             DataColumn[] key = new DataColumn[1];
             key[0] = dt.Columns["MaAccount"];
             dt.PrimaryKey = key;
-
-            for (int i = 0; i < dt.Rows.Count + 1; i++)
+            for (int i = 1; i < dt.Rows.Count+1; i++)
             {
                 if (!dt.Rows.Contains(i))
                 {
@@ -335,7 +324,7 @@ namespace quanLyLaoDong
                 }
             }
 
-            return 0;
+            return 999999;
         }
 
         private void searchCTBTN_Click(object sender, EventArgs e)
@@ -399,6 +388,37 @@ namespace quanLyLaoDong
 
         private void searchPBTB_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void editCTBTN_Click(object sender, EventArgs e)
+        {
+            UpdateData();
+            LoadCongTrinh();
+        }
+
+        void UpdateData()
+        {
+
+            if (congTrinhDataGridView.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = congTrinhDataGridView.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = congTrinhDataGridView.Rows[selectedRowIndex];
+
+                fCTEdit fCTEditForm = new fCTEdit();
+                fCTEditForm.MaCTTrans = Convert.ToInt32((selectedRow.Cells["MaCongTrinh"].Value));
+                fCTEditForm.tenCongTrinhTrans = selectedRow.Cells["TenGoi"].Value.ToString();
+                fCTEditForm.diaDiemTrans = selectedRow.Cells["DiaDiem"].Value.ToString();
+                fCTEditForm.ngayCapPhepTrans = DateTime.Parse(selectedRow.Cells["NgayCapPhep"].Value.ToString());
+                fCTEditForm.ngayKCTrans = DateTime.Parse(selectedRow.Cells["NgayKhoiCong"].Value.ToString()); ;
+                fCTEditForm.ngayKTTrans = DateTime.Parse(selectedRow.Cells["NgayHoanThanhDuKien"].Value.ToString());
+                fCTEditForm.PhongQuanLyTrans = Convert.ToInt32(selectedRow.Cells["MaPhong"].Value);
+
+                fCTEditForm.ShowDialog();
+
+            }
+           
+
 
         }
     }

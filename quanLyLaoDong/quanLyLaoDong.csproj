@@ -91,11 +91,11 @@
     <Compile Include="fCongTrinhAdd.Designer.cs">
       <DependentUpon>fCongTrinhAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="fCTAdd.cs">
+    <Compile Include="fCTEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fCTAdd.Designer.cs">
-      <DependentUpon>fCTAdd.cs</DependentUpon>
+    <Compile Include="fCTEdit.Designer.cs">
+      <DependentUpon>fCTEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="fCongTrinhAdd.resx">
       <DependentUpon>fCongTrinhAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fCTAdd.resx">
-      <DependentUpon>fCTAdd.cs</DependentUpon>
+    <EmbeddedResource Include="fCTEdit.resx">
+      <DependentUpon>fCTEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>

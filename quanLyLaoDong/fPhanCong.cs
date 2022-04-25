@@ -246,7 +246,7 @@ namespace quanLyLaoDong
 
         bool checkIsExist(int MaNV, int MaCT)
         {
-            string q = "select * from dbo.PhanCong where MaNhanVien=" + MaNV ;
+            string q = "select * from dbo.PhanCong where MaNhanVien=" + MaNV +" and MaCongTrinh=" + MaCT ;
             DataTable dt = DataProvider.Instance.ExcuteQuery(q);
 
             if (dt != null && dt.Rows.Count > 0) return false;

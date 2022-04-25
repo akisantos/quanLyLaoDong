@@ -47,11 +47,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.truongPhongChB = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.truongPhongChB);
             this.panel1.Controls.Add(this.maPhongQLLabel);
             this.panel1.Controls.Add(this.nsnv);
             this.panel1.Controls.Add(this.gioiTinhNV);
@@ -246,6 +248,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Chỉnh sửa thông tin nhân viên";
             // 
+            // truongPhongChB
+            // 
+            this.truongPhongChB.AutoSize = true;
+            this.truongPhongChB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.truongPhongChB.Location = new System.Drawing.Point(357, 232);
+            this.truongPhongChB.Name = "truongPhongChB";
+            this.truongPhongChB.Size = new System.Drawing.Size(128, 25);
+            this.truongPhongChB.TabIndex = 15;
+            this.truongPhongChB.Text = "Trưởng phòng";
+            this.truongPhongChB.UseVisualStyleBackColor = true;
+            // 
             // fNVEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,5 +296,6 @@
         private System.Windows.Forms.Label gioiTinhNV;
         private System.Windows.Forms.Label nsnv;
         private System.Windows.Forms.Label maPhongQLLabel;
+        private System.Windows.Forms.CheckBox truongPhongChB;
     }
 }

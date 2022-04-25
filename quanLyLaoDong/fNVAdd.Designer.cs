@@ -43,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.truongPhongChB = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.truongPhongChB);
             this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.gioiTinhCheckBox);
@@ -198,6 +200,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ tên:";
             // 
+            // truongPhongChB
+            // 
+            this.truongPhongChB.AutoSize = true;
+            this.truongPhongChB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.truongPhongChB.Location = new System.Drawing.Point(357, 232);
+            this.truongPhongChB.Name = "truongPhongChB";
+            this.truongPhongChB.Size = new System.Drawing.Size(128, 25);
+            this.truongPhongChB.TabIndex = 13;
+            this.truongPhongChB.Text = "Trưởng phòng";
+            this.truongPhongChB.UseVisualStyleBackColor = true;
+            // 
             // fNVAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -234,5 +247,6 @@
         private System.Windows.Forms.CheckBox gioiTinhCheckBox;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.CheckBox truongPhongChB;
     }
 }

@@ -65,7 +65,7 @@ namespace quanLyLaoDong
             string tenCT = ctNameTB.Text;
             string diaDiem = ctPosTB.Text;
             string phongQL = phongQLTB.SelectedValue.ToString();
-            MessageBox.Show(phongQLTB.SelectedValue.ToString());
+            
             DateTime ngayCapPhep = ngayCapPhepDP.Value.Date;
             DateTime ngayKhoiCong = ngayKhoiCongDP.Value.Date;
             DateTime ngayHoanThanh = ngayHoanThanhDP.Value.Date;

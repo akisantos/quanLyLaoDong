@@ -54,33 +54,29 @@ namespace quanLyLaoDong
             if (searchCategory == "Phân công")
             {
                 SearchPhanCong(sq);
-            }
-
-            if (searchCategory == "Công trình")
-            {
-                MessageBox.Show("ct", "HEHE");
-            }
-
-            if (searchCategory == "Phòng ban")
-            {
-                MessageBox.Show("PB", "HEHE");
-            }
+            }           
 
         }
 
         void SearchNhanVien(string searchQ)
         {
+            ClearGridView();
 
             List<NhanVien> list = NhanVienDAO.Instance.searchNhanVien(searchQ);
+
             if (searchQ == "")
             {
+   
                 resultDataGridView.DataSource = list;
+                NVGridStyle();
+
             }
             else
             {
                if (int.TryParse(searchQ, out int n))
                 {
                     resultDataGridView.DataSource = list;
+                    NVGridStyle();
                 }
                 else
                 {
@@ -92,6 +88,7 @@ namespace quanLyLaoDong
                     if (item != null)
                     {
                         resultDataGridView.DataSource = item;
+                        NVGridStyle();
                     }
                     else MessageBox.Show("Không tìm thấy!");
                 }
@@ -100,9 +97,20 @@ namespace quanLyLaoDong
 
         }
 
+        void NVGridStyle()
+        {
+            resultDataGridView.Columns[0].HeaderText = "ID";
+            resultDataGridView.Columns[1].HeaderText = "Họ tên";
+            resultDataGridView.Columns[2].HeaderText = "Ngày sinh";
+            resultDataGridView.Columns[3].HeaderText = "Giới tính";
+            resultDataGridView.Columns[4].HeaderText = "Địa chỉ";
+            resultDataGridView.Columns[5].HeaderText = "Mã phòng quản lý";
+            
+        }
+
         void SearchPhanCong(string searchQ)
         {
-
+            ClearGridView();
             List<PhanCong> phanCongList = PhanCongDAO.Instance.LoadPhanCong();
             List<CongTrinh> ctList = CongTrinhDAO.Instance.LoadCongTrinh();
             List<NhanVien> nvList = NhanVienDAO.Instance.LoadNhanVien();
@@ -113,6 +121,8 @@ namespace quanLyLaoDong
             resultDataGridView.Columns.Add("TenCT", "Tên công trình");
             resultDataGridView.Columns.Add("TenNV", "Tên nhân viên");
             resultDataGridView.Columns.Add("soGio", "Số giờ phân công");
+
+
             foreach (var item in phanCongList)
             {
 
@@ -139,10 +149,7 @@ namespace quanLyLaoDong
         void dataInitation()
         {   
             searchCategoryCB.Items.Add("Phân công");
-            searchCategoryCB.Items.Add("Công trình");
             searchCategoryCB.Items.Add("Nhân viên");
-            searchCategoryCB.Items.Add("Phòng ban");
-
             searchCategoryCB.SelectedIndex = 0;
             searchCategoryCB.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -160,6 +167,13 @@ namespace quanLyLaoDong
                 string searchCategory = searchCategoryCB.Text;
                 Search(searchStr, searchCategory);
             }
+        }
+
+        void ClearGridView()
+        {
+            resultDataGridView.DataSource = null;
+            resultDataGridView.Columns.Clear();
+            resultDataGridView.Rows.Clear();
         }
     }
 }

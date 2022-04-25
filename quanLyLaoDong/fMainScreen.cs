@@ -14,6 +14,7 @@ namespace quanLyLaoDong
     {
 
         private int loggedAccount;
+
         public fMainScreen()
         {
             InitializeComponent();
